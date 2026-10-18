@@ -3,8 +3,8 @@
   (let* ((a (copy-seq array))
          (states (list (copy-seq a))))
     (loop for i from 1 below (length a) do
-          (let ((v (aref a i))
-                (j (1- i)))
+          (let ((j (1- i))
+                (v (aref a i)))
             (loop while (and (>= j 0) (> (aref a j) v)) do
                   (setf (aref a (1+ j)) (aref a j))
                   (decf j))
