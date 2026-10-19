@@ -34,6 +34,7 @@
   (let ((arr (read-array)))
     (multiple-value-bind (sorted-array swaps)
       (bubble-sort arr)
+
       (print-array-elements sorted-array)
       (format t "~A~%" swaps))))
 
