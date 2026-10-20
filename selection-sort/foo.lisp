@@ -1,4 +1,3 @@
-;;; 選択ソートを実行し、ソート済み配列と交換回数を返す
 (defun selection-sort (arr)
   (let ((a (copy-seq arr))
         (n (length arr))
@@ -17,7 +16,6 @@
     (values a swaps)))
 
 
-;;; 配列を読み込む
 (defun read-array ()
   (let* ((n (read))
          (arr (make-array n)))
@@ -27,12 +25,10 @@
     arr))
 
 
-;;; 配列を出力する
 (defun print-array-elements (arr)
   (format t "~{~A~^ ~}~%" (coerce arr 'list)))
 
 
-;;; メイン処理
 (defun main ()
   (let ((arr (read-array)))
 
