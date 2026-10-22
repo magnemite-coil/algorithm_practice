@@ -10,7 +10,7 @@
                   when (< (aref a j) (aref a minj)) do
                   (setf minj j))
 
-            (unless (= minj i)
+            (unless (= minj i) ; デフォルトのminjが、jをの範囲を全部動いても維持されているとき何もしない。
               (rotatef (aref a i) (aref a minj))
               (incf swaps))))
 
